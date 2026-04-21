@@ -1,0 +1,18 @@
+.navbar-container {
+  position: relative;
+}
+
+.navbar-container img {
+  height: 23px;
+  width: 23px;
+}
+
+@media (max-width: 768px) {
+  .w3-hide-small {
+    display: none !important;
+  }
+  
+  .w3-hide-medium {
+    display: none !important;
+  }
+}
