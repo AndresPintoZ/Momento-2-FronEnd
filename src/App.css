@@ -1,32 +1,62 @@
-/* Reset de estilos por defecto */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
+:root {
+  --neon-accent: #8b5cf6; /* Violeta Neón */
+  --neon-glow: rgba(139, 92, 246, 0.5);
+  --bg-oled: #050505;
+  --card-glass: rgba(22, 22, 22, 0.7);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
 }
 
-/* Estilos generales */
-.w3-container {
-  max-width: 100%;
+.dark-theme {
+  background-color: var(--bg-oled);
+  color: var(--text-primary);
+  min-height: 100vh;
 }
 
-/* Hover effects */
-button:hover {
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
+/* Efecto Glassmorphism */
+.modern-card, .w3-card, .w3-card-4 {
+  background: var(--card-glass) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+  color: var(--text-primary) !important;
 }
 
-/* Responsive para móviles */
-@media (max-width: 768px) {
-  .w3-col.m3,
-  .w3-col.m7,
-  .w3-col.m2 {
-    width: 100% !important;
-  }
+/* Botones Neón */
+.w3-button.w3-theme, .w3-button.w3-theme-d1, .w3-button.w3-theme-d2 {
+  background-color: var(--neon-accent) !important;
+  color: white !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: none;
+}
+
+.w3-button.w3-theme:hover {
+  box-shadow: 0 0 15px var(--neon-glow);
+  transform: translateY(-2px);
+}
+
+/* Inputs Modernos */
+.w3-input {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+}
+
+.w3-input:focus {
+  border-color: var(--neon-accent) !important;
+  outline: none;
 }
 
 
